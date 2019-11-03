@@ -10,14 +10,11 @@ async function sendTelegramMessaage () {
 }
 
 sendTelegramMessaage()
-  .then(
-    result => {
-      console.log(`Sent telegram message ${JSON.stringify(result)}`)
-    },
-    err => {
-      console.log(err)
-    }
-  )
-  .then(() => {
-    process.exit()
+  .then(result => {
+    console.log(`Sent telegram message ${JSON.stringify(result)}`)
+    process.exit(0)
+  })
+  .catch(err => {
+    console.log(err)
+    process.exit(1)
   })
