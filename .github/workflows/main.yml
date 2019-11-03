@@ -11,7 +11,7 @@ jobs:
         run: |
           npm install
       - name: message
-        uses: christian-fei/send-telegram-message@v1
+        uses: christian-fei/send-telegram-message@v2
         with:
           token: "${{ secrets.TELEGRAM_TOKEN }}"
           user_id: "${{ secrets.TELEGRAM_USER_ID }}"
