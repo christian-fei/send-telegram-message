@@ -8,7 +8,7 @@ inputs:
     description: 'The telegram chat id to send the message to'
     required: true
   message:
-    description: 'Message to be sent'
+    description: 'Message to send'
     required: true
 branding:
   icon: arrow-up-circle
