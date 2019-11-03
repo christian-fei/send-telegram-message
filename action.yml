@@ -1,0 +1,18 @@
+name: 'Send telegram message'
+description: 'Send telegram message, can be used on events or as a build step'
+inputs:
+  token:
+    description: 'The telegram token obtained through @BotFather on telegram'
+    required: true
+  user_id:
+    description: 'The telegram chat id to send the message to'
+    required: true
+  message:
+    description: 'Message to be sent'
+    required: true
+branding:
+  icon: arrow-up-circle
+  color: black
+runs:
+  using: 'node12'
+  main: 'src/send-telegram-message.js'
