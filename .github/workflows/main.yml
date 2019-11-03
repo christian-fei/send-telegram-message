@@ -1,0 +1,19 @@
+name: is-tx-confirmed build
+on: [push]
+jobs:
+  build_deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+        with:
+          ref: refs/heads/master
+      - name: install
+        run: |
+          npm install
+      - name: message
+        uses: christian-fei/send-telegram-message@v1
+        with:
+          token: "${{ secrets.TELEGRAM_TOKEN }}"
+          user_id: "${{ secrets.TELEGRAM_USER_ID }}"
+          message: "send-telegram-message run! 🚀"
+
